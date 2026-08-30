@@ -1,0 +1,11 @@
+services:
+  bot:
+    build: .
+    container_name: arbbot
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - bot_data:/data
+
+volumes:
+  bot_data:
